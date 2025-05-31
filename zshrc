@@ -134,9 +134,9 @@ syntaxhighlight=$HOME/.local/share/zsh/zsh-fast-syntax-highlighting/fast-syntax-
 hash bat >/dev/null 2>&1 && alias cat='bat -pp'
 alias v=nvim
 alias vv='NVIM_APPNAME=nvim-ide nvim'
-if hash lsd >/dev/null 2>&1; then
-	alias ll='lsd -Flah --icon never'
-	alias l='lsd -Flah --icon never'
+if hash eza >/dev/null 2>&1; then
+        alias l="eza -lah --time-style '+%Y-%m-%d %H:%M'"
+        alias ll="eza -lah --time-style '+%Y-%m-%d %H:%M'"
 else
 	alias ll='ls -Flash'
 	alias l='ls -Flash'
