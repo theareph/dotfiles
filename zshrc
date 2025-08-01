@@ -5,6 +5,7 @@ touch $HISTFILE
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 
 export EDITOR=nvim
@@ -28,6 +29,8 @@ test -x "$(which asdf 2>/dev/null)" >/dev/null 2>&1 && {
         mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
         [ -f "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf" ] || asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
         fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+	[ -d "$HOME/.asdf/plugins/java" ] && . ~/.asdf/plugins/java/set-java-home.zsh
+
 }
 # ---- ASDF VM
 # ---- pnpm
@@ -146,6 +149,8 @@ alias gaa='git add .'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../../'
+alias ruff-fmt='ruff check --select I --fix; ruff format'
+
 # aliases
 
 
