@@ -6,6 +6,7 @@ touch $HISTFILE
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 
 export EDITOR=nvim
