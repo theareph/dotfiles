@@ -15,9 +15,8 @@
     path = ~/Git/Work/gitconfig
 
 [alias]
-    utccommit = !GPG_TTY=$(tty) git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\" -S
-    utccommitnosign = !git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\"
-    lg = "!f() { \
+    plog = !git log --pretty=fuller
+    siglog = "!f() { \
         git log --all --color --graph --pretty=format:'%C(bold yellow)<sig>%G?</sig>%C(reset) %C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(blue)<%an>%C(reset)' | \
         sed \
         -e 's#<sig>G</sig>#Good#' \
