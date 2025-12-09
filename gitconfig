@@ -15,7 +15,7 @@
     path = ~/Git/Work/gitconfig
 
 [alias]
-    plog = !git log --pretty=fuller
+    lg = !git log --pretty=fuller
     siglog = "!f() { \
         git log --all --color --graph --pretty=format:'%C(bold yellow)<sig>%G?</sig>%C(reset) %C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(blue)<%an>%C(reset)' | \
         sed \
